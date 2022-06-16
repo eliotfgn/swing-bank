@@ -6,15 +6,18 @@ public abstract class Transaction {
     protected Long id;
     protected Date date;
     protected double amount;
+    protected Account account;
 
-    public Transaction(Long id, Date date, double amount) {
+    public Transaction(Long id, Date date, double amount, Account account) {
         this.id = id;
         this.date = date;
         this.amount = amount;
+        this.account = account;
     }
 
-    public Transaction(double amount) {
+    public Transaction(double amount, Account account) {
         this.amount = amount;
+        this.account = account;
         this.date = new Date();
     }
 
@@ -32,5 +35,11 @@ public abstract class Transaction {
         return amount;
     }
 
+    public Account getAccount() {
+        return account;
+    }
 
+    public void setAccount(Account account) {
+        this.account = account;
+    }
 }

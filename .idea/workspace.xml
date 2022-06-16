@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1be5ab76-1356-471b-ac61-82b1f7203f35" name="Changes" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/src/exceptions/UserNotFoundException.java" afterDir="false" />
+    <list default="true" id="1be5ab76-1356-471b-ac61-82b1f7203f35" name="Changes" comment="adding registering and login services">
+      <change afterPath="$PROJECT_DIR$/src/services/BankService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/database/DatabaseConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/DatabaseConnector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Deposit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Deposit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Transaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Withdraw.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Withdraw.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -100,7 +104,7 @@
       <workItem from="1655229763637" duration="9454000" />
       <workItem from="1655288832476" duration="7219000" />
       <workItem from="1655300123268" duration="18178000" />
-      <workItem from="1655396455958" duration="3101000" />
+      <workItem from="1655396455958" duration="12973000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1655151592330</created>
@@ -109,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655151592330</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="adding registering and login services">
+      <created>1655399767957</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1655399767957</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,7 +139,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="adding registering and login services" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding registering and login services" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

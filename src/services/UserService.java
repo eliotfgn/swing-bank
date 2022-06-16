@@ -7,13 +7,19 @@ import models.User;
 import java.sql.SQLException;
 
 public class UserService {
+    private static UserService instance;
     private final DatabaseConnector dataConnector = DatabaseConnector.getInstance();
-    public boolean register(User user) {
-        if(dataConnector.saveUser(user)) {
-            return true;
-        } else {
-            return false;
+
+    private UserService() {}
+
+    public static UserService getInstance() {
+        if (instance == null) {
+            instance = new UserService();
         }
+        return instance;
+    }
+    public boolean register(User user) {
+        return dataConnector.saveUser(user);
     }
 
     public boolean login(String email, String password) {

@@ -1,9 +1,6 @@
 package database;
 
-import models.Account;
-import models.CurrentAccount;
-import models.SavingAccount;
-import models.User;
+import models.*;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -114,7 +111,7 @@ public class DatabaseConnector {
         return true;
     }
 
-    public List<Account> findUserAccount(User user) {
+    public List<Account> findUserAccounts(User user) {
         List<Account> accounts = new ArrayList<>();
         String query = "SELECT * " +
                 "FROM account " +
@@ -143,5 +140,79 @@ public class DatabaseConnector {
         }
 
         return accounts;
+    }
+
+    public boolean updateAccountBalance(long id, double newBalance) {
+        String query = "UPDATE account " +
+                "set balance=(?) " +
+                "where id=(?)";
+        try {
+            statement = connection.prepareStatement(query);
+            statement.setLong(2, id);
+            statement.setDouble(1, newBalance);
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            return false;
+        }
+
+        return true;
+    }
+
+    public boolean addTransaction(Transaction transaction) {
+        String type = "", label="";
+        if (transaction instanceof Deposit) {
+            type = "DEPOSIT";
+            label = "";
+        } else if (transaction instanceof Withdraw) {
+            type = "WITHDRAW";
+            label = ((Withdraw) transaction).getLabel();
+        }
+
+        String query = "INSERT INTO transaction(amount, label, date, type, account_id) " +
+                "VALUES (?,?,?,?,?)";
+
+        try {
+            statement = connection.prepareStatement(query);
+            statement.setDouble(1, transaction.getAmount());
+            statement.setString(2, label);
+            statement.setDate(3, Date.valueOf(transaction.getDate().toString()));
+            statement.setString(4, type);
+            statement.setLong(5, transaction.getAccount().getId());
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            return false;
+        }
+        return true;
+    }
+
+    public Account findAccount(long id) {
+        Account account = null;
+        String query = "SELECT * " +
+                "FROM account " +
+                "WHERE id=(?)";
+
+        try {
+            statement = connection.prepareStatement(query);
+            statement.setLong(1, id);
+            ResultSet result = statement.executeQuery();
+            if (result.next()) {
+                String type = result.getString("type");
+                long accountId = result.getLong("id");
+                double balance = result.getDouble("balance");
+                User owner = findUser(result.getInt("owner_id"));
+
+                if (type.equals("CURRENT")) {
+                    account = new CurrentAccount(accountId, owner, balance);
+                } else {
+                    account = new SavingAccount(accountId, owner, balance);
+                }
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            return null;
+        }
+        return account;
     }
 }
