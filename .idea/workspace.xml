@@ -1,14 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="1be5ab76-1356-471b-ac61-82b1f7203f35" name="Changes" comment="" />
+    <list default="true" id="1be5ab76-1356-471b-ac61-82b1f7203f35" name="Changes" comment="initial commit">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql-connector-java-8.0.29.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/database/DatabaseConnector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/components/RoundedBorder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/views/Home.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/views/Home.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/views/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/Account.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/CurrentAccount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/Deposit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/Loan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/SavingAccount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/Transaction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/Transfert.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/Withdraw.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/banky.iml" beforeDir="false" afterPath="$PROJECT_DIR$/banky.iml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2AXMSU8hZzPqrhy02Iftznr3Yfy" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -20,9 +55,57 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false"
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "168",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW": "true",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.STATE": "left",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "276",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/ELIOT/IdeaProjects/banky/mysql-connector-java-8.0.29.jar",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ELIOT\IdeaProjects\banky" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ELIOT\IdeaProjects\banky" />
+      <recent name="C:\Users\ELIOT\IdeaProjects\banky\src" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="gui.views.Main" />
+      <module name="banky" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="gui.views.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -31,9 +114,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1655151484384</updated>
-      <workItem from="1655151491114" duration="3000" />
+      <workItem from="1655151491114" duration="3814000" />
+      <workItem from="1655229763637" duration="9454000" />
+      <workItem from="1655288832476" duration="7219000" />
+      <workItem from="1655300123268" duration="18178000" />
     </task>
+    <task id="LOCAL-00001" summary="initial commit">
+      <created>1655151592330</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1655151592330</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -45,5 +142,13 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
