@@ -5,27 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1be5ab76-1356-471b-ac61-82b1f7203f35" name="Changes" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mysql-connector-java-8.0.29.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database/DatabaseConnector.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/components/RoundedBorder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/views/Home.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/views/Home.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/views/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/Account.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/CurrentAccount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/Deposit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/Loan.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/SavingAccount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/Transaction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/Transfert.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/Withdraw.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/banky.iml" beforeDir="false" afterPath="$PROJECT_DIR$/banky.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exceptions/UserNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/DatabaseConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/DatabaseConnector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,32 +33,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "168",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW": "true",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.STATE": "left",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "276",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/ELIOT/IdeaProjects/banky/mysql-connector-java-8.0.29.jar",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH&quot;: &quot;168&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW&quot;: &quot;true&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.STATE&quot;: &quot;left&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;276&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ELIOT/IdeaProjects/banky/mysql-connector-java-8.0.29.jar&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ELIOT\IdeaProjects\banky" />
@@ -118,6 +100,7 @@
       <workItem from="1655229763637" duration="9454000" />
       <workItem from="1655288832476" duration="7219000" />
       <workItem from="1655300123268" duration="18178000" />
+      <workItem from="1655396455958" duration="3101000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1655151592330</created>

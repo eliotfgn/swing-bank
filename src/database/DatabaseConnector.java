@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DatabaseConnector {
-    private DatabaseConnector instance;
+    private static DatabaseConnector instance;
     private Connection connection;
     private PreparedStatement statement;
 
@@ -18,21 +18,30 @@ public class DatabaseConnector {
         connection = DriverManager.getConnection("jdbc:mysql://localhost/bank", "swinguser", "swingtest");
     }
 
-    public DatabaseConnector getInstance() throws SQLException {
+    public static DatabaseConnector getInstance() {
         if (instance == null) {
-            instance = new DatabaseConnector();
+            try {
+                instance = new DatabaseConnector();
+            } catch (SQLException e) {
+                System.out.println(e.getMessage());
+            }
         }
         return instance;
     }
 
-    public boolean saveUser(User user) throws SQLException {
-        String query = "INSERT INTO user(firstname,lastname,email,password) VALUES(?,?,?,?)";
-        statement = connection.prepareStatement(query);
-        statement.setString(1, user.getFirstname());
-        statement.setString(2, user.getLastname());
-        statement.setString(3, user.getEmail());
-        statement.setString(4, user.getPassword());
-        statement.executeUpdate();
+    public boolean saveUser(User user) {
+        try {
+            String query = "INSERT INTO user(firstname,lastname,email,password) VALUES(?,?,?,?)";
+            statement = connection.prepareStatement(query);
+            statement.setString(1, user.getFirstname());
+            statement.setString(2, user.getLastname());
+            statement.setString(3, user.getEmail());
+            statement.setString(4, user.getPassword());
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            return false;
+        }
         return true;
     }
 
