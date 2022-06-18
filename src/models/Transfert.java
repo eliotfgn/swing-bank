@@ -7,7 +7,7 @@ public class Transfert extends Transaction{
     private Account receiver;
 
     public Transfert(double amount, String label, Account receiver) {
-        super(amount);
+        super(amount, receiver);
         this.label = label;
         this.receiver = receiver;
     }

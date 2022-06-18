@@ -4,14 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1be5ab76-1356-471b-ac61-82b1f7203f35" name="Changes" comment="adding registering and login services">
-      <change afterPath="$PROJECT_DIR$/src/services/BankService.java" afterDir="false" />
+    <list default="true" id="1be5ab76-1356-471b-ac61-82b1f7203f35" name="Changes" comment="adding bank services">
+      <change afterPath="$PROJECT_DIR$/src/gui/views/AppContent.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/views/AppContent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/views/DepositForm.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/views/DepositForm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/views/HomePage.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/views/HomePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/views/LoginPage.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/views/LoginPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/views/RegisterContent.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/views/RegisterContent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/views/SideBar.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/views/SideBar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/PageNavigator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/DatabaseConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/DatabaseConnector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Deposit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Deposit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Transaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Withdraw.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Withdraw.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/views/Home.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/views/Home.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/views/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/views/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Transfert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Transfert.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,37 +48,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH&quot;: &quot;168&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW&quot;: &quot;true&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.STATE&quot;: &quot;left&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;276&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ELIOT/IdeaProjects/banky/mysql-connector-java-8.0.29.jar&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "168",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW": "true",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.STATE": "left",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "276",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/ELIOT/IdeaProjects/banky/src/gui/views",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ELIOT\IdeaProjects\banky\src\gui\views" />
       <recent name="C:\Users\ELIOT\IdeaProjects\banky" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ELIOT\IdeaProjects\banky\src\gui\views" />
+      <recent name="C:\Users\ELIOT\IdeaProjects\banky\images" />
       <recent name="C:\Users\ELIOT\IdeaProjects\banky" />
       <recent name="C:\Users\ELIOT\IdeaProjects\banky\src" />
     </key>
@@ -104,7 +118,9 @@
       <workItem from="1655229763637" duration="9454000" />
       <workItem from="1655288832476" duration="7219000" />
       <workItem from="1655300123268" duration="18178000" />
-      <workItem from="1655396455958" duration="12973000" />
+      <workItem from="1655396455958" duration="19451000" />
+      <workItem from="1655473162462" duration="6272000" />
+      <workItem from="1655508738548" duration="13916000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1655151592330</created>
@@ -120,7 +136,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655399767957</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="adding bank services">
+      <created>1655415648995</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1655415648995</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,7 +163,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
     <MESSAGE value="adding registering and login services" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding registering and login services" />
+    <MESSAGE value="adding bank services" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding bank services" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
